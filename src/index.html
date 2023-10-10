@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>RPG - Character Generator</title>
+  </head>
+  <body>
+    <button class="menu-btn" id="menu-btn">☰</button>
+
+    <aside class="hide">
+      <button class="close-btn" id="close-btn">‹‹</button>
+      <input type="text" id="search-input"/>
+
+      <div class="sidebar-btn-box">
+        <button id="favorites-btn">► Favorites</button>
+        <div id="favorite-characters"></div>
+        <button id="history-btn">► History</button>
+        <div id="character-history"></div>
+        <button id="clear-btn">🗑 Clear All</button>
+      </div>
+
+      <div id="search-result"></div>
+      
+    </aside>
+
+    <div class="container">
+      <div class="app-logo">
+        <h1>RPG</h1>
+        <p>Character Generator</p>
+      </div>
+      <form>
+        <div class="name-input-box">
+          <label for="name-input">Name</label>
+          <input type="text" id="name-input" required/>
+          <img id="random-name-btn" src="/src/img/dice.png" alt="" />
+        </div>
+        <div class="radio-input-box">
+          <div class="radio-group-box">
+            <p>Race</p>
+            <input type="radio" id="humans" name="race" value="Human" required/>
+            <label for="humans">Humans</label><br />
+
+            <input type="radio" id="orc" name="race" value="Orc" />
+            <label for="orc">Orc</label><br />
+
+            <input type="radio" id="elves" name="race" value="Elf" />
+            <label for="elves">Elves</label><br />
+
+            <input type="radio" id="dwarves" name="race" value="Dwarf" />
+            <label for="dwarves">Dwarves</label><br />
+          </div>
+          <div class="radio-group-box">
+            <p>Class</p>
+            <input type="radio" id="warrior" name="class" value="Warrior" required/>
+            <label for="warrior">Warrior</label><br />
+
+            <input type="radio" id="barbarian" name="class" value="Barbarian" />
+            <label for="barbarian">Barbarian</label><br />
+
+            <input type="radio" id="ranger" name="class" value="Ranger" />
+            <label for="ranger">Ranger</label><br />
+
+            <input type="radio" id="wizard" name="class" value="Wizard" />
+            <label for="wizard">Wizard</label><br /><br />
+          </div>
+        </div>
+        <div class="btn-box">
+          <button id="history-btn">Generate</button>
+          <button id="random-btn">Random</button>
+        </div>
+      </form>
+    </div>
+    <div class="card-modal hide">
+      <div class="app-card-logo">
+        <h1>RPG</h1>
+        <p>Character Generator</p>
+      </div>
+      <div class="card-container">
+        <div class="character-ilustration">
+          <img id="character-img"/>
+        </div>
+        <strong><p id="character-name" style="text-align: center"></p></strong>
+        <div id="character-attributes" class="character-attributes">
+          <div class="field-group">
+            <label for="character-race"><strong>Race: </strong></label>
+            <p id="character-race"></p>
+          </div>
+          <div class="field-group">
+            <label for="character-class"><strong>Class: </strong></label>
+            <p id="character-class"></p>
+          </div>
+          <div class="field-group">
+            <label for="character-trait"><strong>Trait: </strong></label>
+            <p id="character-trait"></p>
+          </div>
+          <div class="field-group">
+            <label for="character-quote"><strong>Quote: </strong></label>
+            <p id="character-quote"></p>
+          </div>
+          <div class="story-field">
+            <label for="character-story"><strong>Story: </strong></label>
+            <p id="character-story">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <button id="save-btn">Save</button>
+        <button id="home-btn">Home</button>
+      </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
