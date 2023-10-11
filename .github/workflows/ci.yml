@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Checkout
-        uses: actions/ckeckout@v1
+        uses: actions/checkout@v1
       - name: Server Deploy
         uses: easingthemes/ssh-deploy@main
         env:
