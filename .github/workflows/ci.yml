@@ -18,6 +18,5 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: public_html/teste1/
-          protocol: ftps
           sftp_only: true
           port: 2222
