@@ -17,6 +17,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: public_html/teste1/
+          local_path: 'src/'
+          remote_path: 'public_html/teste1/'
           sftp_only: true
           port: 2222
