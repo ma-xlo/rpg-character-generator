@@ -14,10 +14,10 @@ jobs:
       - name: 📂 Sync files
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.INPUT_SERVER }}
+          username: ${{ secrets.INPUT_USERNAME }}
+          password: ${{ secrets.INPUT_PASSWORD }}
           local_path: 'src/'
           remote_path: 'public_html/teste1/'
           sftp_only: true
-          port: 2222
+          port: ${{ secrets.INPUT_PORT }}
