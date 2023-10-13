@@ -17,7 +17,7 @@ jobs:
           server: ${{ secrets.INPUT_SERVER }}
           username: ${{ secrets.INPUT_USERNAME }}
           password: ${{ secrets.INPUT_PASSWORD }}
-          local_path: '/home/user/code/RPG - Character Generator'
-          remote_path: ''
+          local_path: './*'
+          remote_path: 'public_html/teste1/'
           sftp_only: true
           port: ${{ secrets.INPUT_PORT }}
