@@ -18,6 +18,6 @@ jobs:
           username: ${{ secrets.INPUT_USERNAME }}
           password: ${{ secrets.INPUT_PASSWORD }}
           local_path: './*'
-          remote_path: 'public_html/app/'
+          remote_path: 'public_html/rpg/'
           sftp_only: true
           port: ${{ secrets.INPUT_PORT }}
